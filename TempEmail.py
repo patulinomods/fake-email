@@ -13,9 +13,9 @@ if platform.python_version().split(".")[0] != "3":
 class Menu:
 	def menu_2():
 		print("""
-\x1b[1;91m _ __ _  _ _  \x1b[1;97m_  _ __ _ _
-\x1b[1;91m  |  |_ |\/| |_] \x1b[1;97m|\/| |_| | |
-\x1b[1;91m  |  |_ |  | |    \x1b[1;97m|  | |  | | |_
+\x1b[1;91m ___ ____ _  _ ___  \x1b[1;97m_  _ ____ _ _
+\x1b[1;91m  |  |___ |\/| |__] \x1b[1;97m|\/| |__| | |
+\x1b[1;91m  |  |___ |  | |    \x1b[1;97m|  | |  | | |___
 \x1b[1;92m=====================================
 \x1b[1;97m [\x1b[1;92m01\x1b[1;97m] \x1b[1;97mGERAR EMAIL ALEATORIO
 \x1b[1;97m [\x1b[1;92m02\x1b[1;97m] \x1b[1;97mCUSTOMIZAR
@@ -39,9 +39,9 @@ class Menu:
 
 def about():
 	print("""
-\x1b[1;91m _ __ _  _ _  \x1b[1;97m_  _ __ _ _
-\x1b[1;91m  |  |_ |\/| |_] \x1b[1;97m|\/| |_| | |
-\x1b[1;91m  |  |_ |  | |    \x1b[1;97m|  | |  | | |_
+\x1b[1;91m ___ ____ _  _ ___  \x1b[1;97m_  _ ____ _ _
+\x1b[1;91m  |  |___ |\/| |__] \x1b[1;97m|\/| |__| | |
+\x1b[1;91m  |  |___ |  | |    \x1b[1;97m|  | |  | | |___
 \x1b[1;92m=====================================
  \x1b[1;92mAuthor \x1b[1;91m: \x1b[1;97mPato Maker
  \x1b[1;92mGithub \x1b[1;91m: \x1b[1;97mhttps://github.com/patulinomods
@@ -108,20 +108,20 @@ def execution(nam, mail):
 def custom():
 	clear()
 	print("""
-\x1b[1;91m _ __ _  _ _  \x1b[1;97m_  _ __ _ _
-\x1b[1;91m  |  |_ |\/| |_] \x1b[1;97m|\/| |_| | |
-\x1b[1;91m  |  |_ |  | |    \x1b[1;97m|  | |  | | |_
+\x1b[1;91m ___ ____ _  _ ___  \x1b[1;97m_  _ ____ _ _
+\x1b[1;91m  |  |___ |\/| |__] \x1b[1;97m|\/| |__| | |
+\x1b[1;91m  |  |___ |  | |    \x1b[1;97m|  | |  | | |___
 \x1b[1;92m=====================================""")
 	for list in range(len(list_mail)):
 		print("\x1b[1;97m [\x1b[1;92m"+str(list+1)+"\x1b[1;97m]",list_mail[list])
 	print("\x1b[1;92m=====================================")
 	name = input("\x1b[1;97m[\x1b[1;92m+\x1b[1;97m] DEFINA UM NOME: ")
 	while name == "":
-		print("  \x1b[1;97m(\x1b[1;91m--\x1b[1;97m) \x1b[1;97mDEFINA UM NOME PORRA(\x1b[1;91m--\x1b[1;97m)")
+		print("  \x1b[1;97m(\x1b[1;91m-_-\x1b[1;97m) \x1b[1;97mDEFINA UM NOME PORRA(\x1b[1;91m-_-\x1b[1;97m)")
 		name = input("\x1b[1;97m[\x1b[1;92m+\x1b[1;97m] DEFINA UM NOME PARA O EMAIL: ")
 	mall = input("\x1b[1;97m[\x1b[1;92m+\x1b[1;97m] ESCOLHA UMA DAS OPÇOES ( 1 A 6 ): ")
 	while mall == "":
-		print("  \x1b[1;97m(\x1b[1;91m--\x1b[1;97m) \x1b[1;97mNAO PODE TAR VASIO PORRA(\x1b[1;91m--\x1b[1;97m)")
+		print("  \x1b[1;97m(\x1b[1;91m-_-\x1b[1;97m) \x1b[1;97mNAO PODE TAR VASIO PORRA(\x1b[1;91m-_-\x1b[1;97m)")
 		mall = input("\x1b[1;97m[\x1b[1;92m+\x1b[1;97m] ESCOLHA UMA DAS 6 OPÇOES : ")
 	try:
 		mal = list_mail[int(mall)-1]
@@ -129,7 +129,7 @@ def custom():
 		exit("\x1b[1;97m[\x1b[1;93m!\x1b[1;97m] ERRO:\x1b[1;91m "+str(er)+"\n")
 	execution(name, mal)
 
-if _name=="main_":
+if __name__=="__main__":
 	clear()
 	try:
 		Menu.menu_2()
